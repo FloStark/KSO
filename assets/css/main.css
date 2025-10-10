@@ -32,7 +32,50 @@
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
 }
+.about .img-fluid {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .logo {
+        max-width: 75%;
+    }
+    .logo img {
+        max-height: 40px;
+        width: auto;
+    }
+    .btn-getstarted {
+        display: none;
+    }
+}
+.portfolio-item img {
+    width: 100%;
+    height: 120px; /* Einheitliche Höhe für alle Logos */
+    object-fit: contain; /* Behält das Seitenverhältnis bei */
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+}
 
+.portfolio-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Logo Styles */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 75%;
+    }
+    .logo img {
+        max-height: 40px;
+        width: auto;
+    }
+}
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
