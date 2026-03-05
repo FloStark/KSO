@@ -1,29 +1,40 @@
-
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Ubuntu",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Ubuntu", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #5f687b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #b32121; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #5f687b;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #b32121;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #5f687b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #10bc69; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #5f687b; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #10bc69; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #5f687b;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #10bc69;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #5f687b;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #10bc69;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -32,50 +43,59 @@
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
 }
+
 .about .img-fluid {
-    max-width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
+
 @media (max-width: 768px) {
-    .logo {
-        max-width: 75%;
-    }
-    .logo img {
-        max-height: 40px;
-        width: auto;
-    }
-    .btn-getstarted {
-        display: none;
-    }
+  .logo {
+    max-width: 75%;
+  }
+
+  .logo img {
+    max-height: 40px;
+    width: auto;
+  }
+
+  .btn-getstarted {
+    display: none;
+  }
 }
+
 .portfolio-item img {
-    width: 100%;
-    height: 120px; /* Einheitliche Höhe für alle Logos */
-    object-fit: contain; /* Behält das Seitenverhältnis bei */
-    padding: 15px;
-    background: white;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 120px;
+  /* Einheitliche Höhe für alle Logos */
+  object-fit: contain;
+  /* Behält das Seitenverhältnis bei */
+  padding: 15px;
+  background: white;
+  margin-bottom: 10px;
 }
 
 .portfolio-item {
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 /* Responsive Logo Styles */
 @media (max-width: 768px) {
-    .logo {
-        max-width: 75%;
-    }
-    .logo img {
-        max-height: 40px;
-        width: auto;
-    }
+  .logo {
+    max-width: 75%;
+  }
+
+  .logo img {
+    max-height: 40px;
+    width: auto;
+  }
 }
+
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
@@ -1780,3 +1800,447 @@ section,
   color: var(--accent-color);
 }
 
+/*--------------------------------------------------------------
+# FAQ Accordion
+--------------------------------------------------------------*/
+.accordion-item {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  margin-bottom: 10px;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.accordion-button {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--heading-color);
+  padding: 18px 24px;
+  background-color: var(--surface-color);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.accordion-button::after {
+  background-image: none;
+  content: "\F282";
+  font-family: "bootstrap-icons";
+  font-size: 14px;
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  padding: 20px 24px;
+  color: var(--default-color);
+  line-height: 1.7;
+}
+
+/*--------------------------------------------------------------
+# Subpage Brand Detail Styles
+--------------------------------------------------------------*/
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.brand-logo-detail {
+  transition: transform 0.3s ease;
+}
+
+.brand-logo-detail:hover {
+  transform: scale(1.05);
+}
+
+.brand-icon-placeholder {
+  padding: 20px;
+}
+
+/*--------------------------------------------------------------
+# Modern CTA Section
+--------------------------------------------------------------*/
+.cta-modern {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.cta-modern::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(179, 33, 33, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: cta-float 8s ease-in-out infinite;
+}
+
+.cta-modern::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(179, 33, 33, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: cta-float 6s ease-in-out infinite reverse;
+}
+
+@keyframes cta-float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-30px) scale(1.05);
+  }
+}
+
+.cta-modern .cta-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-modern .cta-card h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-modern .cta-card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.cta-modern .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-modern .cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(179, 33, 33, 0.4);
+}
+
+.cta-modern .cta-btn-primary:hover {
+  background: #d42828;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(179, 33, 33, 0.5);
+  color: #fff;
+}
+
+.cta-modern .cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-modern .cta-btn-secondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.cta-modern .cta-btn-primary i,
+.cta-modern .cta-btn-secondary i {
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .cta-modern .cta-card {
+    padding: 35px 24px;
+  }
+
+  .cta-modern .cta-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-modern .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# Opening Hours Top Bar
+--------------------------------------------------------------*/
+.topbar {
+  background: linear-gradient(90deg, #1a1a2e, #16213e);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  padding: 8px 0;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.topbar .status-badge.open {
+  background: rgba(40, 167, 69, 0.2);
+  color: #5dd97f;
+}
+
+.topbar .status-badge.closed {
+  background: rgba(220, 53, 69, 0.2);
+  color: #f07080;
+}
+
+.topbar .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.topbar .status-badge.open .status-dot {
+  background: #5dd97f;
+}
+
+.topbar .status-badge.closed .status-dot {
+  background: #f07080;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.topbar .hours-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar .hours-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.topbar .hours-info i {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.topbar a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.topbar a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .topbar .hours-info {
+    display: none;
+  }
+
+  .topbar .container {
+    justify-content: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# Cookie Consent Banner
+--------------------------------------------------------------*/
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.cookie-banner.show {
+  transform: translateY(0);
+}
+
+.cookie-banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cookie-banner .cookie-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.cookie-banner .cookie-text a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.cookie-banner .cookie-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-banner .cookie-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.cookie-banner .cookie-btn-accept {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.cookie-banner .cookie-btn-accept:hover {
+  background: #d42828;
+  transform: translateY(-2px);
+}
+
+.cookie-banner .cookie-btn-decline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cookie-banner .cookie-btn-decline:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.maps-placeholder {
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #555;
+  border-radius: 8px;
+  width: 100%;
+  height: 270px;
+}
+
+.maps-placeholder i {
+  font-size: 40px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.maps-placeholder p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.maps-placeholder button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.maps-placeholder button:hover {
+  background: #d42828;
+}
+
+@media (max-width: 576px) {
+  .cookie-banner .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
