@@ -2244,3 +2244,27 @@ section,
     text-align: center;
   }
 }
+
+/*--------------------------------------------------------------
+# Murix Credits - Premium Minimalist Style
+--------------------------------------------------------------*/
+.footer .murix-credits {
+  margin-top: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.footer .murix-credits a {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer .murix-credits a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
