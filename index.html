@@ -79,6 +79,218 @@
         display: none !important;
       }
     }
+
+    /* Sommeraktion Popup CSS */
+    .sommer-promo-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1050;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      padding: 15px;
+    }
+    
+    .sommer-promo-backdrop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .sommer-promo-modal {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      max-width: 580px;
+      width: 100%;
+      overflow: hidden;
+      transform: scale(0.9) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .sommer-promo-backdrop.show .sommer-promo-modal {
+      transform: scale(1) translateY(0);
+    }
+    
+    .sommer-promo-header {
+      background: linear-gradient(135deg, #d32f2f 0%, #ff5722 50%, #ff9800 100%);
+      padding: 20px 24px;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+    }
+    
+    .sommer-promo-header h3 {
+      font-family: var(--heading-font);
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: 1px;
+      margin: 0 0 4px 0;
+      color: #ffffff;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      text-transform: uppercase;
+    }
+    
+    .sommer-promo-subtitle {
+      font-family: var(--default-font);
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.95;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .sommer-promo-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .sommer-promo-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #ffffff;
+      font-size: 18px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+      z-index: 10;
+    }
+    
+    .sommer-promo-close-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: rotate(90deg);
+    }
+    
+    .sommer-promo-body {
+      padding: 16px;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .sommer-promo-pdf-container {
+      width: 100%;
+      height: 60vh;
+      min-height: 380px;
+      max-height: 550px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      position: relative;
+    }
+    
+    .sommer-promo-pdf-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    
+    .sommer-promo-footer {
+      padding: 16px 24px 20px 24px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      border-top: 1px solid #f1f5f9;
+    }
+    
+    .sommer-promo-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: center;
+      flex: 1;
+      text-decoration: none;
+    }
+    
+    .sommer-promo-btn-primary {
+      background: var(--accent-color, #b32121);
+      color: #ffffff !important;
+      border: none;
+      box-shadow: 0 4px 12px rgba(179, 33, 33, 0.2);
+    }
+    
+    .sommer-promo-btn-primary:hover {
+      background: #901717;
+      box-shadow: 0 6px 16px rgba(179, 33, 33, 0.3);
+      transform: translateY(-1px);
+    }
+    
+    .sommer-promo-btn-secondary {
+      background: #f1f5f9;
+      color: #475569 !important;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .sommer-promo-btn-secondary:hover {
+      background: #e2e8f0;
+      color: #1e293b !important;
+    }
+
+    /* Adjustments for Mobile */
+    @media (max-width: 576px) {
+      .sommer-promo-modal {
+        max-width: 100%;
+        border-radius: 16px;
+      }
+      .sommer-promo-header {
+        padding: 16px;
+      }
+      .sommer-promo-header h3 {
+        font-size: 20px;
+      }
+      .sommer-promo-body {
+        padding: 10px;
+      }
+      .sommer-promo-pdf-container {
+        height: 50vh;
+        min-height: 300px;
+      }
+      .sommer-promo-footer {
+        padding: 12px;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .sommer-promo-btn {
+        width: 100%;
+      }
+    }
   </style>
 
   <!-- Structured Data: LocalBusiness -->
@@ -548,6 +760,34 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js" defer></script>
 
+  <!-- Sommeraktion Popup Overlay -->
+  <div class="sommer-promo-backdrop" id="sommerPromoBackdrop">
+    <div class="sommer-promo-modal">
+      <button class="sommer-promo-close-btn" id="sommerPromoCloseX" aria-label="Schließen">&times;</button>
+      
+      <div class="sommer-promo-header">
+        <h3>Sommer Aktion</h3>
+        <p class="sommer-promo-subtitle">Vega Nova &amp; Kids Shoe Outlet</p>
+        <span class="sommer-promo-badge">19. Juni bis 04. Juli 2026</span>
+      </div>
+      
+      <div class="sommer-promo-body">
+        <div class="sommer-promo-pdf-container">
+          <iframe class="sommer-promo-pdf-frame" src="aktionen/260601-26Sommeraktion-DINlang-entwurf.pdf#toolbar=0&navpanes=0&statusbar=0" title="Sommeraktion Flyer"></iframe>
+        </div>
+      </div>
+      
+      <div class="sommer-promo-footer">
+        <a href="aktionen/260601-26Sommeraktion-DINlang-entwurf.pdf" target="_blank" class="sommer-promo-btn sommer-promo-btn-primary" id="sommerPromoBtnPdf">
+          <i class="bi bi-file-earmark-pdf-fill"></i> Flyer in neuem Tab öffnen
+        </a>
+        <button class="sommer-promo-btn sommer-promo-btn-secondary" id="sommerPromoBtnClose">
+          Schließen
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookie-banner">
     <div class="container">
@@ -617,6 +857,48 @@
         }, 1000);
       } else if (consent === 'accepted') {
         loadMaps();
+      }
+    })();
+  </script>
+
+  <script>
+    // Sommeraktion Popup Logic
+    (function () {
+      const now = new Date();
+      // Die Aktion läuft bis zum 04.07.2026. Das bedeutet, das Popup soll ab dem 05.07.2026 nicht mehr angezeigt werden.
+      const promoEnd = new Date('2026-07-05T00:00:00'); 
+      
+      const isPromoActive = now < promoEnd;
+      const isClosedInSession = sessionStorage.getItem('sommer_aktion_2026_closed') === 'true';
+      
+      if (isPromoActive && !isClosedInSession) {
+        window.addEventListener('DOMContentLoaded', () => {
+          const backdrop = document.getElementById('sommerPromoBackdrop');
+          const closeBtnX = document.getElementById('sommerPromoCloseX');
+          const closeBtnBtn = document.getElementById('sommerPromoBtnClose');
+          
+          if (backdrop) {
+            // Zeige das Popup nach einer kurzen Verzögerung (1000ms)
+            setTimeout(() => {
+              backdrop.classList.add('show');
+            }, 1000);
+            
+            const closePopup = () => {
+              backdrop.classList.remove('show');
+              sessionStorage.setItem('sommer_aktion_2026_closed', 'true');
+            };
+            
+            if (closeBtnX) closeBtnX.addEventListener('click', closePopup);
+            if (closeBtnBtn) closeBtnBtn.addEventListener('click', closePopup);
+            
+            // Schließen bei Klick außerhalb der Card
+            backdrop.addEventListener('click', (e) => {
+              if (e.target === backdrop) {
+                closePopup();
+              }
+            });
+          }
+        });
       }
     })();
   </script>
