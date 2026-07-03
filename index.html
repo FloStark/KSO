@@ -6,9 +6,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Kids Shoe Outlet & Vega Nova Graz – Kinderschuhe & Designmöbel</title>
   <meta name="description"
-    content="Kids Shoe Outlet Graz und Vega Nova Graz – Entdecken Sie hochwertige Kinderschuhe von Affenzahn, Bisgaard, Ricosta & Richter sowie exklusive Designmöbel von HüslerNest, Signet & Aeris. Persönliche Beratung in Graz.">
+    content="Kids Shoe Outlet Graz und Vega Nova Graz – Entdecken Sie hochwertige Kinderschuhe von Affenzahn, Bisgaard, Ricosta, Richter & Koel (ab Herbst) sowie exklusive Designmöbel von HüslerNest, Signet & Aeris. Persönliche Beratung in Graz.">
   <meta name="keywords"
-    content="Kids Shoe Outlet, Kinderschuhe Graz, Affenzahn, Bisgaard, Ricosta, Richter, Vega Nova Graz, HüslerNest, Signet, Aeris, Designmöbel Graz, El Naturalista, Think Schuhe, Markenschuhe Kinder, Graz">
+    content="Kids Shoe Outlet, Kinderschuhe Graz, Affenzahn, Bisgaard, Ricosta, Richter, Koel, Vega Nova Graz, HüslerNest, Signet, Aeris, Designmöbel Graz, El Naturalista, Think Schuhe, Markenschuhe Kinder, Graz">
   <link rel="canonical" href="https://kindermarkenschuhe.at/">
 
   <meta name="google-site-verification" content="me1Z2CbKRP0Em43CtzfIoLjLreOKRtBXpZN5HJsizYg" />
@@ -80,13 +80,13 @@
       }
     }
 
-    /* Sommeraktion Popup CSS */
-    .sommer-promo-backdrop {
+    /* Koel Ankündigung Popup CSS */
+    .koel-promo-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.5);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       z-index: 1050;
       display: flex;
       align-items: center;
@@ -97,14 +97,14 @@
       padding: 15px;
     }
     
-    .sommer-promo-backdrop.show {
+    .koel-promo-backdrop.show {
       opacity: 1;
       visibility: visible;
     }
     
-    .sommer-promo-modal {
+    .koel-promo-modal {
       background: #ffffff;
-      border-radius: 20px;
+      border-radius: 24px;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
       max-width: 580px;
       width: 100%;
@@ -112,60 +112,58 @@
       transform: scale(0.9) translateY(20px);
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
       position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
       display: flex;
       flex-direction: column;
     }
     
-    .sommer-promo-backdrop.show .sommer-promo-modal {
+    .koel-promo-backdrop.show .koel-promo-modal {
       transform: scale(1) translateY(0);
     }
     
-    .sommer-promo-header {
-      background: linear-gradient(135deg, #d32f2f 0%, #ff5722 50%, #ff9800 100%);
-      padding: 20px 24px;
+    .koel-promo-header {
+      background: linear-gradient(135deg, #115e59 0%, #0d9488 100%);
+      padding: 24px 24px;
       color: #ffffff;
       text-align: center;
       position: relative;
     }
     
-    .sommer-promo-header h3 {
+    .koel-promo-header h3 {
       font-family: var(--heading-font);
       font-weight: 800;
-      font-size: 24px;
-      letter-spacing: 1px;
-      margin: 0 0 4px 0;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+      margin: 8px 0 0 0;
       color: #ffffff;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-      text-transform: uppercase;
     }
     
-    .sommer-promo-subtitle {
+    .koel-promo-subtitle {
       font-family: var(--default-font);
       font-size: 14px;
       font-weight: 500;
-      opacity: 0.95;
-      margin: 0;
+      opacity: 0.9;
+      margin: 4px 0 0 0;
       letter-spacing: 0.5px;
     }
 
-    .sommer-promo-badge {
+    .koel-promo-badge {
       display: inline-block;
       background: rgba(255, 255, 255, 0.2);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 50px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
     
-    .sommer-promo-close-btn {
+    .koel-promo-close-btn {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 16px;
+      right: 16px;
       background: rgba(255, 255, 255, 0.2);
       border: none;
       color: #ffffff;
@@ -181,41 +179,50 @@
       z-index: 10;
     }
     
-    .sommer-promo-close-btn:hover {
+    .koel-promo-close-btn:hover {
       background: rgba(255, 255, 255, 0.35);
       transform: rotate(90deg);
     }
     
-    .sommer-promo-body {
-      padding: 16px;
-      background: #f8fafc;
+    .koel-promo-body {
+      padding: 24px;
+      background: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 16px;
     }
     
-    .sommer-promo-pdf-container {
+    .koel-promo-img-container {
       width: 100%;
-      height: 60vh;
-      min-height: 380px;
-      max-height: 550px;
-      background: #ffffff;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-      border: 1px solid #e2e8f0;
-      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border: 1px solid #f1f5f9;
     }
     
-    .sommer-promo-pdf-frame {
+    .koel-promo-img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
       display: block;
+      transition: transform 0.5s ease;
     }
     
-    .sommer-promo-footer {
-      padding: 16px 24px 20px 24px;
+    .koel-promo-img-container:hover .koel-promo-img {
+      transform: scale(1.03);
+    }
+
+    .koel-promo-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #475569;
+      text-align: center;
+      margin: 0;
+      padding: 0 10px;
+    }
+    
+    .koel-promo-footer {
+      padding: 16px 24px 24px 24px;
       background: #ffffff;
       display: flex;
       flex-direction: row;
@@ -223,12 +230,12 @@
       border-top: 1px solid #f1f5f9;
     }
     
-    .sommer-promo-btn {
+    .koel-promo-btn {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 50px;
       font-weight: 600;
       font-size: 14px;
@@ -239,55 +246,52 @@
       text-decoration: none;
     }
     
-    .sommer-promo-btn-primary {
+    .koel-promo-btn-primary {
       background: var(--accent-color, #b32121);
       color: #ffffff !important;
       border: none;
       box-shadow: 0 4px 12px rgba(179, 33, 33, 0.2);
     }
     
-    .sommer-promo-btn-primary:hover {
+    .koel-promo-btn-primary:hover {
       background: #901717;
       box-shadow: 0 6px 16px rgba(179, 33, 33, 0.3);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
     
-    .sommer-promo-btn-secondary {
+    .koel-promo-btn-secondary {
       background: #f1f5f9;
       color: #475569 !important;
       border: 1px solid #e2e8f0;
     }
     
-    .sommer-promo-btn-secondary:hover {
+    .koel-promo-btn-secondary:hover {
       background: #e2e8f0;
       color: #1e293b !important;
     }
 
     /* Adjustments for Mobile */
     @media (max-width: 576px) {
-      .sommer-promo-modal {
+      .koel-promo-modal {
         max-width: 100%;
-        border-radius: 16px;
+        border-radius: 20px;
       }
-      .sommer-promo-header {
+      .koel-promo-header {
+        padding: 20px 16px;
+      }
+      .koel-promo-header h3 {
+        font-size: 22px;
+      }
+      .koel-promo-body {
         padding: 16px;
+        gap: 12px;
       }
-      .sommer-promo-header h3 {
-        font-size: 20px;
-      }
-      .sommer-promo-body {
-        padding: 10px;
-      }
-      .sommer-promo-pdf-container {
-        height: 50vh;
-        min-height: 300px;
-      }
-      .sommer-promo-footer {
-        padding: 12px;
+      .koel-promo-footer {
+        padding: 16px;
         flex-direction: column;
         gap: 8px;
       }
-      .sommer-promo-btn {
+      .koel-promo-btn {
         width: 100%;
       }
     }
@@ -299,7 +303,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Kids Shoe Outlet & Vega Nova Graz",
-    "description": "Hochwertige Kinderschuhe und exklusive Designmöbel in Graz. Marken: Affenzahn, Bisgaard, Ricosta, Richter, HüslerNest, Signet, Aeris, El Naturalista, Think!",
+    "description": "Hochwertige Kinderschuhe und exklusive Designmöbel in Graz. Marken: Affenzahn, Bisgaard, Ricosta, Richter, Koel, HüslerNest, Signet, Aeris, El Naturalista, Think!",
     "url": "https://kindermarkenschuhe.at",
     "telephone": "+43316672277",
     "email": "graz@veganova.at",
@@ -503,6 +507,18 @@
               </div>
             </div>
 
+            <!-- Koel -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="assets/img/portfolio/koel-logo.svg" class="img-fluid" alt="Koel Barfußschuhe Logo"
+                loading="lazy">
+              <div class="portfolio-info">
+                <h4>Koel</h4>
+                <p>Barfußschuhe - Ab Herbst erhältlich!</p>
+                <a href="assets/img/portfolio/koel-logo.svg" title="Koel Barfußschuhe - Ab Herbst erhältlich" data-gallery="portfolio-gallery"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
             <!-- Hüsler Nest -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
               <img src="assets/img/portfolio/huesler.svg" class="img-fluid"
@@ -598,7 +614,7 @@
                 </h3>
                 <div id="faqt-2" class="accordion-collapse collapse" aria-labelledby="faqt-heading-2"
                   data-bs-parent="#faqTeaserAccordion">
-                  <div class="accordion-body">Kinderschuhe: Affenzahn, Ricosta, Richter, Bisgaard, Ricosta,
+                  <div class="accordion-body">Kinderschuhe: Affenzahn, Bisgaard, Ricosta, Richter, Koel (ab Herbst),
                     Orangenkinder u.v.m. Möbel & Lifestyle: HüslerNest, Signet, Aeris, El Naturalista, Think!</div>
                 </div>
               </div>
@@ -719,6 +735,7 @@
             <li><i class="bi bi-chevron-right"></i> <a href="bisgaard-graz.html">Bisgaard</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="ricosta-graz.html">Ricosta</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="affenzahn-graz.html">Affenzahn</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="koel-graz.html">Koel</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="hueslernest-graz.html">HüslerNest</a></li>
           </ul>
         </div>
@@ -760,28 +777,30 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js" defer></script>
 
-  <!-- Sommeraktion Popup Overlay -->
-  <div class="sommer-promo-backdrop" id="sommerPromoBackdrop">
-    <div class="sommer-promo-modal">
-      <button class="sommer-promo-close-btn" id="sommerPromoCloseX" aria-label="Schließen">&times;</button>
+  <!-- Koel Barfußschuhe Ankündigung Popup Overlay -->
+  <div class="koel-promo-backdrop" id="koelPromoBackdrop">
+    <div class="koel-promo-modal">
+      <button class="koel-promo-close-btn" id="koelPromoCloseX" aria-label="Schließen">&times;</button>
       
-      <div class="sommer-promo-header">
-        <h3>Sommer Aktion</h3>
-        <p class="sommer-promo-subtitle">Vega Nova &amp; Kids Shoe Outlet</p>
-        <span class="sommer-promo-badge">19. Juni bis 04. Juli 2026</span>
+      <div class="koel-promo-header">
+        <span class="koel-promo-badge">Neu ab Herbst 2026</span>
+        <h3>Koel Barfußschuhe</h3>
+        <p class="koel-promo-subtitle">Demnächst im Kids Shoe Outlet Graz</p>
       </div>
       
-      <div class="sommer-promo-body">
-        <div class="sommer-promo-pdf-container">
-          <iframe class="sommer-promo-pdf-frame" src="aktionen/260601-26Sommeraktion-DINlang-entwurf.pdf#toolbar=0&navpanes=0&statusbar=0" title="Sommeraktion Flyer"></iframe>
+      <div class="koel-promo-body">
+        <div class="koel-promo-img-container">
+          <img src="assets/img/portfolio/koel_barefoot.webp" alt="Koel Barfußschuhe" class="koel-promo-img">
         </div>
+        <p class="koel-promo-text">
+          Wir bringen Ihnen die beliebten Barfußschuhe von <strong>Koel</strong> nach Graz!
+          Ab Herbst bieten wir Ihnen eine große Auswahl dieser flexiblen, nachhaltigen und mit Liebe gestalteten Kinderschuhe. 
+          Für natürliche Fußbewegung und gesundes Wachstum.
+        </p>
       </div>
       
-      <div class="sommer-promo-footer">
-        <a href="aktionen/260601-26Sommeraktion-DINlang-entwurf.pdf" target="_blank" class="sommer-promo-btn sommer-promo-btn-primary" id="sommerPromoBtnPdf">
-          <i class="bi bi-file-earmark-pdf-fill"></i> Flyer in neuem Tab öffnen
-        </a>
-        <button class="sommer-promo-btn sommer-promo-btn-secondary" id="sommerPromoBtnClose">
+      <div class="koel-promo-footer">
+        <button class="koel-promo-btn koel-promo-btn-primary" id="koelPromoBtnClose">
           Schließen
         </button>
       </div>
@@ -862,20 +881,20 @@
   </script>
 
   <script>
-    // Sommeraktion Popup Logic
+    // Koel Ankündigung Popup Logic
     (function () {
       const now = new Date();
-      // Die Aktion läuft bis zum 04.07.2026. Das bedeutet, das Popup soll ab dem 05.07.2026 nicht mehr angezeigt werden.
-      const promoEnd = new Date('2026-07-05T00:00:00'); 
+      // Die Ankündigung läuft bis zum Herbst/Winter (z.B. 01.11.2026).
+      const promoEnd = new Date('2026-11-01T00:00:00'); 
       
       const isPromoActive = now < promoEnd;
-      const isClosedInSession = sessionStorage.getItem('sommer_aktion_2026_closed') === 'true';
+      const isClosedInSession = sessionStorage.getItem('koel_announcement_closed') === 'true';
       
       if (isPromoActive && !isClosedInSession) {
         window.addEventListener('DOMContentLoaded', () => {
-          const backdrop = document.getElementById('sommerPromoBackdrop');
-          const closeBtnX = document.getElementById('sommerPromoCloseX');
-          const closeBtnBtn = document.getElementById('sommerPromoBtnClose');
+          const backdrop = document.getElementById('koelPromoBackdrop');
+          const closeBtnX = document.getElementById('koelPromoCloseX');
+          const closeBtnBtn = document.getElementById('koelPromoBtnClose');
           
           if (backdrop) {
             // Zeige das Popup nach einer kurzen Verzögerung (1000ms)
@@ -885,7 +904,7 @@
             
             const closePopup = () => {
               backdrop.classList.remove('show');
-              sessionStorage.setItem('sommer_aktion_2026_closed', 'true');
+              sessionStorage.setItem('koel_announcement_closed', 'true');
             };
             
             if (closeBtnX) closeBtnX.addEventListener('click', closePopup);
